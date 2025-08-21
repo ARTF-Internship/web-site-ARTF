@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services Citoyens - ARTF</title>
-    
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800&family=Noto+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
     <!-- CSS Libraries -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
+ <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/animations.css">
-    
+   
     <!-- Custom Tailwind Config -->
     <script>
         tailwind.config = {
@@ -40,29 +41,61 @@
         }
     </script>
 </head>
+
 <body class="font-sans antialiased bg-artf-blanc text-gray-800">
     <!-- Navigation -->
-    <nav class="navbar-glass fixed top-4 left-4 right-4 z-50 px-8 py-4 rounded-3xl transition-all duration-300" id="navbar">
+       <nav class="navbar-glass fixed top-4 left-4 right-4 z-50 px-8 py-4 rounded-3xl transition-all duration-300" id="navbar">
         <div class="flex items-center justify-between">
             <div class="navbar-brand">
-                <a href="index.html" class="flex items-center">
+                <a href="#accueil" class="flex items-center">
                     <img src="logo-artf.png" alt="ARTF Logo" class="h-12">
                 </a>
             </div>
-    </footer>
-    
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/navbar.js"></script>
-</body>
-</html>
             
             <div class="hidden lg:flex items-center space-x-8">
-                <a href="index.html" class="nav-link">Accueil</a>
-                <a href="index.html#apropos" class="nav-link">ARTF</a>
+                <a href="index.html#accueil" class="nav-link">Accueil</a>
+                
+                  <div class="relative dropdown">
+                    <a href="#apropos" class="nav-link active dropdown-toggle .active">ARTF</a>
+                    <div class="dropdown-menu"> 
+                        <a href="index.html#apropros" class="dropdown-item">A Propos</a>
+                        <a href="about.html" class="dropdown-item">Organigramme</a>
+                        
+                    </div>
+                </div>
                 <a href="index.html#missions" class="nav-link">Missions</a>
-                <a href="services.html" class="nav-link active">Services</a>
+           <!--      <div class="relative dropdown">
+                    <a href="#missions" class="nav-link dropdown-toggle">Missions</a>
+                    <div class="dropdown-menu">
+                        
+                        <a href="#securite" class="dropdown-item">Sécurité ferroviaire</a>
+                        <a href="#developpement" class="dropdown-item">Développement</a>
+                        <a href="#regulation" class="dropdown-item">Régulation tarifaire</a>
+                    </div>
+                </div> -->
+                <div class="relative dropdown">
+                    <a href="#services" class="nav-link dropdown-toggle">Services</a>
+                    <div class="dropdown-menu">
+                        <a href="services.html" class="dropdown-item">objet perdu</a>
+                      <a href="services.html" class="dropdown-item">signaler incident </a>
+                      <a href="services.html" class="dropdown-item">demande d'autorisation </a>
+                    </div>
+                </div>
+                 <div class="relative dropdown">
+                    <a href="reglementations.html" class="nav-link dropdown-toggle">Reglementations</a>
+                    <div class="dropdown-menu">
+                        <a href="#lois" class="dropdown-item">Lois</a>
+                        <a href="#ordonnances" class="dropdown-item">Ordonnances</a>
+                        <a href="#decrets" class="dropdown-item">Décrets</a>
+                        <a href="#arretes" class="dropdown-item">Arretés</a>
+                        <a href="#deliberations" class="dropdown-item">Délibérations</a>
+                        <a href="#decisions" class="dropdown-item">Décisions</a>
+                        <a href="#baremes" class="dropdown-item">Barèmes</a>
+                        <a href="#formulaires" class="dropdown-item">Formulaires</a>
+
+
+                    </div>
+                </div>
                 <a href="index.html#contact" class="nav-link">Contact</a>
             </div>
             
@@ -75,22 +108,28 @@
         
         <!-- Mobile Menu -->
         <div class="mobile-menu" id="mobile-menu">
-            <a href="index.html" class="mobile-nav-link">Accueil</a>
-            <a href="index.html#apropos" class="mobile-nav-link">ARTF</a>
+            <a href="index.html#accueil" class="mobile-nav-link">Accueil</a>
+            <a href="#apropos" class="mobile-nav-link active">ARTF</a>
             <a href="index.html#missions" class="mobile-nav-link">Missions</a>
-            <a href="services.html" class="mobile-nav-link active">Services</a>
+            <a href="index.htmlservices.html" class="mobile-nav-link">Services </a>
+            <a href="index.htmlreglementations" class="mobile-nav-link">reglementations </a>
             <a href="index.html#contact" class="mobile-nav-link">Contact</a>
         </div>
     </nav>
     
+    
+
     <!-- Hero Section -->
-    <section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-artf-bleu to-artf-vert">
-        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')] bg-cover bg-center opacity-20"></div>
-        
+    <section
+        class="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-artf-bleu to-artf-vert">
+        <div
+            class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')] bg-cover bg-center opacity-20">
+        </div>
+
         <div class="container mx-auto px-6 relative z-10 text-center">
             <div class="max-w-4xl mx-auto" data-aos="fade-up" data-aos-duration="800">
                 <h1 class="text-5xl md:text-6xl font-bold text-white mb-6">
-                    Services <span class="text-artf-jaune">Citoyens</span>
+                    Services 
                 </h1>
                 <p class="text-xl md:text-2xl text-white opacity-90 mb-8">
                     Effectuez vos démarches administratives facilement et rapidement
@@ -99,7 +138,7 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Services Section -->
     <section class="py-20">
         <div class="container mx-auto px-6">
@@ -108,199 +147,249 @@
                 <div class="service-detail-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-detail-header">
                         <div class="service-detail-icon bg-artf-vert">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
                         </div>
                         <h3 class="text-2xl font-bold text-artf-bleu">Demande d'autorisation</h3>
                     </div>
-                    
+
                     <div class="service-detail-content">
                         <p class="text-gray-600 mb-6">
-                            Déposez votre demande d'autorisation pour les activités liées au transport ferroviaire. 
-                            Ce service vous permet de soumettre vos dossiers de demande d'autorisation d'exploitation, 
+                            Déposez votre demande d'autorisation pour les activités liées au transport ferroviaire.
+                            Ce service vous permet de soumettre vos dossiers de demande d'autorisation d'exploitation,
                             de construction ou de modification d'infrastructures ferroviaires.
                         </p>
-                        
+
                         <div class="space-y-3 mb-6">
                             <div class="flex items-center text-sm text-gray-600">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-artf-vert" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-artf-vert" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
                                 </svg>
                                 Autorisation d'exploitation
                             </div>
                             <div class="flex items-center text-sm text-gray-600">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-artf-vert" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-artf-vert" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
                                 </svg>
                                 Construction d'infrastructures
                             </div>
                             <div class="flex items-center text-sm text-gray-600">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-artf-vert" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-artf-vert" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
                                 </svg>
                                 Accès aux installations
                             </div>
                             <div class="flex items-center text-sm text-gray-600">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-artf-vert" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-artf-vert" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
                                 </svg>
                                 Modification d'équipements
                             </div>
                         </div>
-                        
+
                         <button class="service-btn bg-artf-vert hover:bg-artf-vert-dark" data-service="autorisation">
                             <span>Faire une demande</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3" />
                             </svg>
                         </button>
                     </div>
                 </div>
-                
+
                 <!-- Service 2: Signaler un incident -->
                 <div class="service-detail-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="service-detail-header">
                         <div class="service-detail-icon bg-artf-jaune text-artf-bleu">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                             </svg>
                         </div>
                         <h3 class="text-2xl font-bold text-artf-bleu">Signaler un incident</h3>
                     </div>
-                    
+
                     <div class="service-detail-content">
                         <p class="text-gray-600 mb-6">
-                            Rapportez tout incident, dysfonctionnement ou problème de sécurité sur le réseau ferroviaire gabonais. 
-                            Votre signalement contribue à l'amélioration de la sécurité et de la qualité du service ferroviaire.
+                            Rapportez tout incident, dysfonctionnement ou problème de sécurité sur le réseau ferroviaire
+                            gabonais.
+                            Votre signalement contribue à l'amélioration de la sécurité et de la qualité du service
+                            ferroviaire.
                         </p>
-                        
+
                         <div class="space-y-3 mb-6">
                             <div class="flex items-center text-sm text-gray-600">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-artf-jaune" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-artf-jaune" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
                                 </svg>
                                 Retards importants
                             </div>
                             <div class="flex items-center text-sm text-gray-600">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-artf-jaune" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-artf-jaune" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
                                 </svg>
                                 Problèmes d'infrastructure
                             </div>
                             <div class="flex items-center text-sm text-gray-600">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-artf-jaune" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-artf-jaune" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
                                 </svg>
                                 Mauvaises conditions de service
                             </div>
                         </div>
-                        
-                        <button class="service-btn bg-artf-jaune hover:bg-yellow-500 text-artf-bleu" data-service="incident">
+
+                        <button class="service-btn bg-artf-jaune hover:bg-yellow-500 text-artf-bleu"
+                            data-service="incident">
                             <span>Signaler un incident</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3" />
                             </svg>
                         </button>
                     </div>
                 </div>
-                
+
                 <!-- Service 3: Objet perdu -->
                 <div class="service-detail-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="service-detail-header">
                         <div class="service-detail-icon bg-artf-bleu">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                             </svg>
                         </div>
                         <h3 class="text-2xl font-bold text-artf-bleu">Objet perdu</h3>
                     </div>
-                    
+
                     <div class="service-detail-content">
                         <p class="text-gray-600 mb-6">
-                            Déclarez la perte d'un objet dans les trains ou gares, ou recherchez un objet que vous avez perdu. 
+                            Déclarez la perte d'un objet dans les trains ou gares, ou recherchez un objet que vous avez
+                            perdu.
                             Notre service d'objets trouvés vous aide à retrouver vos biens perdus sur le réseau ferroviaire.
                         </p>
-                        
+
                         <div class="space-y-3 mb-6">
                             <div class="flex items-center text-sm text-gray-600">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-artf-bleu" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-artf-bleu" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
                                 </svg>
                                 Déclaration de perte
                             </div>
                             <div class="flex items-center text-sm text-gray-600">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-artf-bleu" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-artf-bleu" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
                                 </svg>
                                 Recherche d'objets trouvés
                             </div>
                             <div class="flex items-center text-sm text-gray-600">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-artf-bleu" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-artf-bleu" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
                                 </svg>
                                 Récupération d'objets
                             </div>
                             <div class="flex items-center text-sm text-gray-600">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-artf-bleu" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2 text-artf-bleu" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
                                 </svg>
                                 Suivi de dossier
                             </div>
                         </div>
-                        
+
                         <button class="service-btn bg-artf-bleu hover:bg-blue-800" data-service="objet-perdu">
                             <span>Déclarer un objet</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3" />
                             </svg>
                         </button>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Information Section -->
             <div class="mt-20 bg-white rounded-3xl p-8 shadow-xl" data-aos="fade-up" data-aos-delay="400">
                 <div class="text-center mb-8">
                     <h2 class="text-3xl font-bold text-artf-bleu mb-4">Informations importantes</h2>
                     <p class="text-gray-600">Tout ce que vous devez savoir avant d'utiliser nos services</p>
                 </div>
-                
+
                 <div class="grid md:grid-cols-3 gap-8">
                     <div class="text-center">
-                        <div class="bg-artf-vert bg-opacity-20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-artf-vert" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        <div
+                            class="bg-artf-vert bg-opacity-20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-artf-vert" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
                         </div>
                         <h3 class="font-bold text-gray-800 mb-2">Délai de traitement</h3>
-                        <p class="text-sm text-gray-600">Les demandes sont traitées sous 5 à 10 jours ouvrables selon leur complexité.</p>
+                        <p class="text-sm text-gray-600">Les demandes sont traitées sous 5 à 10 jours ouvrables selon leur
+                            complexité.</p>
                     </div>
-                    
+
                     <div class="text-center">
-                        <div class="bg-artf-jaune bg-opacity-20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-artf-jaune" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        <div
+                            class="bg-artf-jaune bg-opacity-20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-artf-jaune" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
                         </div>
                         <h3 class="font-bold text-gray-800 mb-2">Confirmation</h3>
-                        <p class="text-sm text-gray-600">Vous recevrez une confirmation par email après soumission de votre demande.</p>
+                        <p class="text-sm text-gray-600">Vous recevrez une confirmation par email après soumission de votre
+                            demande.</p>
                     </div>
-                    
+
                     <div class="text-center">
-                        <div class="bg-artf-bleu bg-opacity-20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-artf-bleu" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM12 18a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V18.75A.75.75 0 0112 18zM2.25 12a.75.75 0 01.75-.75h2.25a.75.75 0 010 1.5H3a.75.75 0 01-.75-.75zM18 12a.75.75 0 01.75-.75h2.25a.75.75 0 010 1.5H18.75A.75.75 0 0118 12z" />
+                        <div
+                            class="bg-artf-bleu bg-opacity-20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-artf-bleu" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM12 18a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V18.75A.75.75 0 0112 18zM2.25 12a.75.75 0 01.75-.75h2.25a.75.75 0 010 1.5H3a.75.75 0 01-.75-.75zM18 12a.75.75 0 01.75-.75h2.25a.75.75 0 010 1.5H18.75A.75.75 0 0118 12z" />
                             </svg>
                         </div>
                         <h3 class="font-bold text-gray-800 mb-2">Support</h3>
-                        <p class="text-sm text-gray-600">Notre équipe est disponible pour vous accompagner du lundi au vendredi.</p>
+                        <p class="text-sm text-gray-600">Notre équipe est disponible pour vous accompagner du lundi au
+                            vendredi.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <!-- Modals -->
     <!-- Modal Autorisation -->
     <div id="modal-autorisation" class="modal">
@@ -309,7 +398,7 @@
                 <h3 class="text-2xl font-bold text-artf-bleu">Demande d'autorisation</h3>
                 <button class="modal-close" data-modal="autorisation">&times;</button>
             </div>
-            
+
             <form class="modal-form" id="form-autorisation">
                 <div class="grid md:grid-cols-2 gap-6">
                     <div>
@@ -321,7 +410,7 @@
                         <input type="text" class="form-input">
                     </div>
                 </div>
-                
+
                 <div class="grid md:grid-cols-2 gap-6">
                     <div>
                         <label class="form-label">Email *</label>
@@ -332,7 +421,7 @@
                         <input type="tel" class="form-input" required>
                     </div>
                 </div>
-                
+
                 <div>
                     <label class="form-label">Type d'autorisation *</label>
                     <select class="form-input" required>
@@ -344,31 +433,34 @@
                         <option value="autre">Autre</option>
                     </select>
                 </div>
-                
+
                 <div>
                     <label class="form-label">Description détaillée *</label>
-                    <textarea rows="4" class="form-input" placeholder="Décrivez votre projet et les autorisations nécessaires..." required></textarea>
+                    <textarea rows="4" class="form-input"
+                        placeholder="Décrivez votre projet et les autorisations nécessaires..." required></textarea>
                 </div>
-                
+
                 <div>
                     <label class="form-label">Localisation du projet</label>
                     <input type="text" class="form-input" placeholder="Ville, région...">
                 </div>
-                
+
                 <div>
                     <label class="form-label">Documents justificatifs</label>
                     <input type="file" class="form-input" multiple accept=".pdf,.doc,.docx,.jpg,.png">
-                    <p class="text-sm text-gray-500 mt-1">Formats acceptés: PDF, DOC, DOCX, JPG, PNG (max 5MB par fichier)</p>
+                    <p class="text-sm text-gray-500 mt-1">Formats acceptés: PDF, DOC, DOCX, JPG, PNG (max 5MB par fichier)
+                    </p>
                 </div>
-                
+
                 <div class="flex justify-end space-x-4">
                     <button type="button" class="btn btn-secondary" data-modal="autorisation">Annuler</button>
-                    <button type="submit" class="btn btn-primary bg-artf-vert hover:bg-artf-vert-dark">Envoyer la demande</button>
+                    <button type="submit" class="btn btn-primary bg-artf-vert hover:bg-artf-vert-dark">Envoyer la
+                        demande</button>
                 </div>
             </form>
         </div>
     </div>
-    
+
     <!-- Modal Incident -->
     <div id="modal-incident" class="modal">
         <div class="modal-content">
@@ -376,7 +468,7 @@
                 <h3 class="text-2xl font-bold text-artf-bleu">Signaler un incident</h3>
                 <button class="modal-close" data-modal="incident">&times;</button>
             </div>
-            
+
             <form class="modal-form" id="form-incident">
                 <div class="grid md:grid-cols-2 gap-6">
                     <div>
@@ -388,7 +480,7 @@
                         <input type="email" class="form-input" required>
                     </div>
                 </div>
-                
+
                 <div class="grid md:grid-cols-2 gap-6">
                     <div>
                         <label class="form-label">Téléphone</label>
@@ -399,7 +491,7 @@
                         <input type="date" class="form-input" required>
                     </div>
                 </div>
-                
+
                 <div class="grid md:grid-cols-2 gap-6">
                     <div>
                         <label class="form-label">Heure approximative</label>
@@ -417,17 +509,18 @@
                         </select>
                     </div>
                 </div>
-                
+
                 <div>
                     <label class="form-label">Lieu de l'incident *</label>
                     <input type="text" class="form-input" placeholder="Gare, ligne, kilomètre..." required>
                 </div>
-                
+
                 <div>
                     <label class="form-label">Description détaillée *</label>
-                    <textarea rows="4" class="form-input" placeholder="Décrivez l'incident en détail..." required></textarea>
+                    <textarea rows="4" class="form-input" placeholder="Décrivez l'incident en détail..."
+                        required></textarea>
                 </div>
-                
+
                 <div>
                     <label class="form-label">Gravité perçue</label>
                     <select class="form-input">
@@ -437,21 +530,22 @@
                         <option value="critique">Critique</option>
                     </select>
                 </div>
-                
+
                 <div>
                     <label class="form-label">Photos/Vidéos</label>
                     <input type="file" class="form-input" multiple accept=".jpg,.jpeg,.png,.mp4,.mov">
                     <p class="text-sm text-gray-500 mt-1">Si disponibles, joignez des éléments visuels de l'incident</p>
                 </div>
-                
+
                 <div class="flex justify-end space-x-4">
                     <button type="button" class="btn btn-secondary" data-modal="incident">Annuler</button>
-                    <button type="submit" class="btn btn-primary bg-artf-jaune hover:bg-yellow-500 text-artf-bleu">Signaler l'incident</button>
+                    <button type="submit" class="btn btn-primary bg-artf-jaune hover:bg-yellow-500 text-artf-bleu">Signaler
+                        l'incident</button>
                 </div>
             </form>
         </div>
     </div>
-    
+
     <!-- Modal Objet Perdu -->
     <div id="modal-objet-perdu" class="modal">
         <div class="modal-content">
@@ -459,7 +553,7 @@
                 <h3 class="text-2xl font-bold text-artf-bleu">Déclarer un objet perdu</h3>
                 <button class="modal-close" data-modal="objet-perdu">&times;</button>
             </div>
-            
+
             <form class="modal-form" id="form-objet-perdu">
                 <div class="grid md:grid-cols-2 gap-6">
                     <div>
@@ -471,7 +565,7 @@
                         <input type="email" class="form-input" required>
                     </div>
                 </div>
-                
+
                 <div class="grid md:grid-cols-2 gap-6">
                     <div>
                         <label class="form-label">Téléphone *</label>
@@ -482,7 +576,7 @@
                         <input type="date" class="form-input" required>
                     </div>
                 </div>
-                
+
                 <div class="grid md:grid-cols-2 gap-6">
                     <div>
                         <label class="form-label">Heure approximative</label>
@@ -493,12 +587,13 @@
                         <input type="text" class="form-input" placeholder="Ex: TR-001">
                     </div>
                 </div>
-                
+
                 <div>
                     <label class="form-label">Lieu de la perte *</label>
-                    <input type="text" class="form-input" placeholder="Gare de départ, gare d'arrivée, dans le train..." required>
+                    <input type="text" class="form-input" placeholder="Gare de départ, gare d'arrivée, dans le train..."
+                        required>
                 </div>
-                
+
                 <div>
                     <label class="form-label">Type d'objet *</label>
                     <select class="form-input" required>
@@ -511,23 +606,25 @@
                         <option value="autre">Autre</option>
                     </select>
                 </div>
-                
+
                 <div>
                     <label class="form-label">Description détaillée *</label>
-                    <textarea rows="4" class="form-input" placeholder="Décrivez l'objet perdu (couleur, marque, taille, signes distinctifs...)" required></textarea>
+                    <textarea rows="4" class="form-input"
+                        placeholder="Décrivez l'objet perdu (couleur, marque, taille, signes distinctifs...)"
+                        required></textarea>
                 </div>
-                
+
                 <div>
                     <label class="form-label">Valeur estimée</label>
                     <input type="number" class="form-input" placeholder="En FCFA">
                 </div>
-                
+
                 <div>
                     <label class="form-label">Photos de l'objet</label>
                     <input type="file" class="form-input" multiple accept=".jpg,.jpeg,.png">
                     <p class="text-sm text-gray-500 mt-1">Si vous avez des photos de l'objet perdu</p>
                 </div>
-                
+
                 <div class="flex justify-end space-x-4">
                     <button type="button" class="btn btn-secondary" data-modal="objet-perdu">Annuler</button>
                     <button type="submit" class="btn btn-primary bg-artf-bleu hover:bg-blue-800">Déclarer l'objet</button>
@@ -535,7 +632,7 @@
             </form>
         </div>
     </div>
-    
+
     <!-- Footer -->
     <footer class="bg-artf-bleu text-white pt-16 pb-8">
         <div class="container mx-auto px-6">
@@ -543,10 +640,11 @@
                 <div>
                     <img src="logo-artf.png" alt="ARTF Logo" class="h-16 mb-4">
                     <p class="opacity-90">
-                        L'Autorité de Régulation des Transports Ferroviaires veille au bon fonctionnement et au développement du secteur ferroviaire gabonais.
+                        L'Autorité de Régulation des Transports Ferroviaires veille au bon fonctionnement et au
+                        développement du secteur ferroviaire gabonais.
                     </p>
                 </div>
-                
+
                 <div>
                     <h4 class="text-lg font-bold mb-4 relative pb-2">
                         <span class="relative">
@@ -555,13 +653,20 @@
                         </span>
                     </h4>
                     <ul class="space-y-2">
-                        <li><a href="index.html" class="opacity-90 hover:opacity-100 hover:text-artf-jaune transition-colors">Accueil</a></li>
-                        <li><a href="index.html#apropos" class="opacity-90 hover:opacity-100 hover:text-artf-jaune transition-colors">ARTF</a></li>
-                        <li><a href="index.html#missions" class="opacity-90 hover:opacity-100 hover:text-artf-jaune transition-colors">Missions</a></li>
-                        <li><a href="services.html" class="opacity-90 hover:opacity-100 hover:text-artf-jaune transition-colors">Services</a></li>
+                        <li><a href="index.html"
+                                class="opacity-90 hover:opacity-100 hover:text-artf-jaune transition-colors">Accueil</a>
+                        </li>
+                        <li><a href="index.html#apropos"
+                                class="opacity-90 hover:opacity-100 hover:text-artf-jaune transition-colors">ARTF</a></li>
+                        <li><a href="index.html#missions"
+                                class="opacity-90 hover:opacity-100 hover:text-artf-jaune transition-colors">Missions</a>
+                        </li>
+                        <li><a href="services.html"
+                                class="opacity-90 hover:opacity-100 hover:text-artf-jaune transition-colors">Services</a>
+                        </li>
                     </ul>
                 </div>
-                
+
                 <div>
                     <h4 class="text-lg font-bold mb-4 relative pb-2">
                         <span class="relative">
@@ -570,13 +675,21 @@
                         </span>
                     </h4>
                     <ul class="space-y-2">
-                        <li><a href="#autorisation" class="opacity-90 hover:opacity-100 hover:text-artf-jaune transition-colors">Demande d'autorisation</a></li>
-                        <li><a href="#incident" class="opacity-90 hover:opacity-100 hover:text-artf-jaune transition-colors">Signaler un incident</a></li>
-                        <li><a href="#objet-perdu" class="opacity-90 hover:opacity-100 hover:text-artf-jaune transition-colors">Objets perdus</a></li>
-                        <li><a href="#documents" class="opacity-90 hover:opacity-100 hover:text-artf-jaune transition-colors">Documents utiles</a></li>
+                        <li><a href="#autorisation"
+                                class="opacity-90 hover:opacity-100 hover:text-artf-jaune transition-colors">Demande
+                                d'autorisation</a></li>
+                        <li><a href="#incident"
+                                class="opacity-90 hover:opacity-100 hover:text-artf-jaune transition-colors">Signaler un
+                                incident</a></li>
+                        <li><a href="#objet-perdu"
+                                class="opacity-90 hover:opacity-100 hover:text-artf-jaune transition-colors">Objets
+                                perdus</a></li>
+                        <li><a href="#documents"
+                                class="opacity-90 hover:opacity-100 hover:text-artf-jaune transition-colors">Documents
+                                utiles</a></li>
                     </ul>
                 </div>
-                
+
                 <div>
                     <h4 class="text-lg font-bold mb-4 relative pb-2">
                         <span class="relative">
@@ -586,39 +699,57 @@
                     </h4>
                     <ul class="space-y-2">
                         <li class="flex items-start">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 mt-0.5 text-artf-jaune" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 mt-0.5 text-artf-jaune" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                             </svg>
                             <span class="opacity-90">BP 2110, Libreville, Gabon</span>
                         </li>
                         <li class="flex items-start">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 mt-0.5 text-artf-jaune" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 mt-0.5 text-artf-jaune" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                             </svg>
                             <span class="opacity-90">(+241) 01 77 25 89</span>
                         </li>
                         <li class="flex items-start">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 mt-0.5 text-artf-jaune" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 mt-0.5 text-artf-jaune" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                             </svg>
                             <span class="opacity-90">contact@artf.ga</span>
                         </li>
                     </ul>
                 </div>
             </div>
-            
+
             <div class="border-t border-artf-bleu-light pt-8 flex flex-col md:flex-row justify-between items-center">
                 <p class="opacity-90 mb-4 md:mb-0">
                     &copy; 2025 Autorité de Régulation des Transports Ferroviaires. Tous droits réservés.
                 </p>
-                
+
                 <div class="flex space-x-6">
-                    <a href="#" class="opacity-90 hover:opacity-100 hover:text-artf-jaune transition-colors">Mentions légales</a>
-                    <a href="#" class="opacity-90 hover:opacity-100 hover:text-artf-jaune transition-colors">Politique de confidentialité</a>
-                    <a href="#" class="opacity-90 hover:opacity-100 hover:text-artf-jaune transition-colors">Accessibilité</a>
+                    <a href="#" class="opacity-90 hover:opacity-100 hover:text-artf-jaune transition-colors">Mentions
+                        légales</a>
+                    <a href="#" class="opacity-90 hover:opacity-100 hover:text-artf-jaune transition-colors">Politique de
+                        confidentialité</a>
+                    <a href="#"
+                        class="opacity-90 hover:opacity-100 hover:text-artf-jaune transition-colors">Accessibilité</a>
                 </div>
             </div>
         </div>
-                            </div>
-                        </div>  
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/services.js"></script>
+</body>
+
+</html>
