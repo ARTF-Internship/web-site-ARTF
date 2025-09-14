@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sécurité ferroviaire au Gabon - ARTF</title>
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800&family=Noto+Sans:wght@400;500;600;700&display=swap"
+            rel="stylesheet">
+
+        <!-- CSS Libraries -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/navbar.css">
+        <link rel="stylesheet" href="css/animations.css">
+
+        <!-- Custom Tailwind Config -->
+        <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'artf-vert': '#42b74f',
+                        'artf-vert-dark': '#1f8851',
+                        'artf-jaune': '#EEE831',
+                        'artf-bleu': '#2531a1',
+                        'artf-blanc': '#F5F5F5',
+                    },
+                    fontFamily: {
+                        'sans': ['Work Sans', 'Noto Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+        <style>
+        .article-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+        
+        .article-content h2, .article-content h3 {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            color: #2531a1;
+            font-weight: 700;
+        }
+        
+        .article-content h2 {
+            font-size: 1.8rem;
+        }
+        
+        .article-content h3 {
+            font-size: 1.5rem;
+        }
+        
+        .article-content blockquote {
+            border-left: 4px solid #42b74f;
+            padding-left: 1.5rem;
+            margin: 2rem 0;
+            font-style: italic;
+            color: #555;
+        }
+        
+        .article-content ul, .article-content ol {
+            margin: 1.5rem 0;
+            padding-left: 1.5rem;
+        }
+        
+        .article-content li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .article-image {
+            border-radius: 1rem;
+            overflow: hidden;
+            margin: 2rem 0;
+        }
+        
+        .share-buttons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 0.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .share-buttons a:hover {
+            transform: translateY(-3px);
+        }
+        
+        .related-article {
+            transition: all 0.3s ease;
+        }
+        
+        .related-article:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+    </head>
+    <body class="font-sans antialiased bg-artf-blanc text-gray-800">
+        <!-- Floating Blobs Background -->
+        <div
+            class="blob animate-float w-64 h-64 bg-artf-vert rounded-full top-20 left-10"></div>
+        <div
+            class="blob animate-float-reverse w-80 h-80 bg-artf-jaune rounded-full bottom-20 right-10"></div>
+        <div
+            class="blob animate-float w-96 h-96 bg-artf-bleu rounded-full top-1/2 left-1/2"></div>
+
+        <!-- Navigation -->
+        <nav
+            class="navbar-glass fixed top-4 left-4 right-4 z-50 px-8 py-4 rounded-3xl transition-all duration-300"
+            id="navbar">
+            <div class="flex items-center justify-between">
+                <div class="navbar-brand">
+                    <a href="index.html" class="flex items-center">
+                        <img src="logo-artf.png" alt="ARTF Logo" class="h-12">
+                    </a>
+                </div>
+
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html#accueil" class="nav-link">Accueil</a>
+                    <div class="relative dropdown">
+                        <a href="index.html#apropos"
+                            class="nav-link dropdown-toggle">ARTF</a>
+                        <div class="dropdown-menu">
+                            <a href="index.html#apropros"
+                                class="dropdown-item">A Propos</a>
+                            <a href="about.html"
+                                class="dropdown-item">Organigramme</a>
+                        </div>
+                    </div>
+                    <a href="index.html#missions" class="nav-link">Missions</a>
+                    <div class="relative dropdown">
+                        <a href="index.html#services"
+                            class="nav-link dropdown-toggle">Services</a>
+                        <div class="dropdown-menu">
+                            <a href="services.html" class="dropdown-item">objet
+                                trouvé</a>
+                            <a href="services.html"
+                                class="dropdown-item">signaler incident </a>
+                            <a href="services.html"
+                                class="dropdown-item">demande d'autorisation</a>
+                        </div>
+                    </div>
+                    <div class="relative dropdown">
+                        <a href="reglementations.html"
+                            class="nav-link dropdown-toggle">Reglementations</a>
+                        <div class="dropdown-menu">
+                            <a href="#lois" class="dropdown-item">Lois</a>
+                            <a href="#ordonnances"
+                                class="dropdown-item">Ordonnances</a>
+                            <a href="#decrets" class="dropdown-item">Décrets</a>
+                            <a href="#arretes" class="dropdown-item">Arretés</a>
+                            <a href="#deliberations"
+                                class="dropdown-item">Délibérations</a>
+                            <a href="#decisions"
+                                class="dropdown-item">Décisions</a>
+                            <a href="#baremes" class="dropdown-item">Barèmes</a>
+                            <a href="#formulaires"
+                                class="dropdown-item">Formulaires</a>
+                        </div>
+                    </div>
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                </div>
+
+                <button class="lg:hidden hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div class="mobile-menu" id="mobile-menu">
+                <a href="index.html#accueil" class="mobile-nav-link">Accueil</a>
+                <a href="index.html#apropos" class="mobile-nav-link">ARTF</a>
+                <a href="index.html#missions"
+                    class="mobile-nav-link">Missions</a>
+                <a href="services.html" class="mobile-nav-link">Services </a>
+                <a href="reglementations"
+                    class="mobile-nav-link">reglementations </a>
+                <a href="index.html#contact" class="mobile-nav-link">Contact</a>
+            </div>
+        </nav>
+
+        <!-- Blog Detail Section -->
+        <section class="pt-32 pb-20 relative">
+            <div class="container mx-auto px-6">
+                <!-- Breadcrumb -->
+                <div class="mb-8" data-aos="fade-down">
+                    <nav class="text-sm">
+                        <ol class="list-none p-0 inline-flex">
+                            <li class="flex items-center">
+                                <a href="index.html"
+                                    class="text-artf-bleu hover:text-artf-vert">Accueil</a>
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="h-4 w-4 mx-2" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7" />
+                                </svg>
+                            </li>
+                            <li class="flex items-center">
+                                <a href="index.html#actualites"
+                                    class="text-artf-bleu hover:text-artf-vert">Actualités</a>
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="h-4 w-4 mx-2" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7" />
+                                </svg>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="text-gray-600">Sécurité
+                                    ferroviaire</span>
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+
+                <!-- Article Header -->
+                <div class="max-w-4xl mx-auto mb-12" data-aos="fade-up">
+                    <div class="mb-6">
+                        <span
+                            class="inline-block px-4 py-1 bg-artf-vert text-white rounded-full text-sm font-medium">Infrastructure</span>
+                    </div>
+
+                    <h1
+                        class="text-4xl md:text-5xl font-bold text-artf-bleu mb-6">Sécurité
+                        ferroviaire au Gabon : l'ARTF et la Setrag en campagne
+                        pour protéger les riverains</h1>
+
+                    <div class="flex items-center text-gray-600">
+                        <div class="flex items-center mr-6">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="h-5 w-5 mr-2" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round"
+                                    stroke-linejoin="round" stroke-width="2"
+                                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                            <span>16 Août 2025</span>
+                        </div>
+                        <div class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="h-5 w-5 mr-2" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round"
+                                    stroke-linejoin="round" stroke-width="2"
+                                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                <path stroke-linecap="round"
+                                    stroke-linejoin="round" stroke-width="2"
+                                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                            </svg>
+                            <span>5 min de lecture</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Featured Image -->
+                <div
+                    class="max-w-4xl mx-auto mb-12 rounded-2xl overflow-hidden shadow-xl"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://gabonews.com/IMG/jpg/byt.jpg"
+                        alt="Campagne de sécurité ferroviaire"
+                        class="w-full h-auto object-cover">
+                </div>
+
+                <!-- Article Content -->
+                <div class="max-w-3xl mx-auto">
+                    <div class="article-content text-lg text-gray-700 mb-12"
+                        data-aos="fade-up" data-aos-delay="200">
+                        <p class="lead">L'Autorité de Régulation des Transports
+                            Ferroviaires (ARTF) et la Société d'Exploitation du
+                            Transgabonais (Setrag) ont lancé une campagne
+                            conjointe de sensibilisation à la sécurité
+                            ferroviaire, visant particulièrement les populations
+                            riveraines des voies ferrées.</p>
+
+                        <h2>Une initiative préventive pour sauver des vies</h2>
+
+                        <p>Cette campagne, qui s'étendra sur plusieurs mois, a
+                            pour objectif principal de réduire les accidents le
+                            long des voies ferrées en informant et éduquant les
+                            populations sur les dangers liés à la proximité avec
+                            les infrastructures ferroviaires.</p>
+
+                        <div class="article-image">
+                            <img
+                                src="https://images.unsplash.com/photo-1581985673473-1c8eb13d8c8a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+                                alt="Sensibilisation sécurité ferroviaire"
+                                class="w-full h-auto">
+                            <p
+                                class="text-center text-sm text-gray-600 mt-2">Une
+                                session de sensibilisation dans une communauté
+                                riveraine</p>
+                        </div>
+
+                        <p>De leur côté, l'ARTF et la SETRAG rappellent que
+                            cette démarche est gratuite et centrée sur la
+                            sensibilisation, avant toute mesure coercitive. «
+                            Notre mission est de sauver des vies et de préserver
+                            la sécurité autour du chemin de fer », conclut M.
+                            Ollomo, directeur de la sécurité à l'ARTF.</p>
+
+                        <blockquote>
+                            "Notre approche est avant tout pédagogique. Nous voulons que chaque citoyen comprenne les risques et adopte les bons réflexes pour sa propre sécurité."
+                        </blockquote>
+
+                        <h2>Les axes principaux de la campagne</h2>
+
+                        <p>La campagne s'articule autour de plusieurs axes
+                            majeurs :</p>
+
+                        <ul>
+                            <li>Sensibilisation dans les écoles et
+                                établissements scolaires</li>
+                            <li>Rencontres avec les chefs de villages et
+                                responsables communautaires</li>
+                            <li>Distribution de supports éducatifs
+                                multilingues</li>
+                            <li>Installation de signalétiques aux points
+                                critiques</li>
+                            <li>Patrouilles de sensibilisation le long des
+                                voies</li>
+                        </ul>
+
+                        <h2>Un enjeu national</h2>
+
+                        <p>Le réseau ferroviaire gabonais s'étend sur près de
+                            669 km, traversant de nombreuses zones habitées. La
+                            cohabitation entre les populations et les
+                            infrastructures ferroviaires nécessite une vigilance
+                            constante et une éducation continue aux règles de
+                            sécurité.</p>
+
+                        <div class="article-image">
+                            <img
+                                src="https://gabonews.com/IMG/jpg/but-2.jpg"
+                                alt="Train au Gabon" class="w-full h-auto">
+                            <p class="text-center text-sm text-gray-600 mt-2">Le
+                                réseau ferroviaire traverse de nombreuses zones
+                                habitées</p>
+                        </div>
+
+                        <p>Cette initiative conjointe de l'ARTF et de la Setrag
+                            s'inscrit dans le cadre plus large de la stratégie
+                            nationale de sécurité ferroviaire 2025-2030, qui
+                            prévoit un investissement important dans la
+                            modernisation des infrastructures et la
+                            sensibilisation des publics.</p>
+
+                        <h3>Perspectives futures</h3>
+
+                        <p>À plus long terme, l'ARTF envisage la création d'un
+                            observatoire national de la sécurité ferroviaire qui
+                            collectera et analysera les données d'accidents pour
+                            mieux orienter les actions de prévention. Des
+                            partenariats avec des experts internationaux sont
+                            également à l'étude pour renforcer l'expertise
+                            locale en matière de sécurité ferroviaire.</p>
+                    </div>
+
+                    <!-- Share Buttons -->
+                    <div class="flex items-center mb-12" data-aos="fade-up">
+                        <span class="text-gray-700 font-medium mr-4">Partager
+                            :</span>
+                        <div class="share-buttons flex">
+                            <a href="#" class="bg-artf-bleu text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    width="20" height="20" fill="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z" />
+                                </svg>
+                            </a>
+                            <a href="#" class="bg-artf-vert text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    width="20" height="20" fill="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+                                </svg>
+                            </a>
+                            <a href="#" class="bg-artf-jaune text-artf-bleu">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    width="20" height="20" fill="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.066 9.645c.183 4.04-2.83 8.544-8.164 8.544-1.622 0-3.131-.476-4.402-1.291 1.524.18 3.045-.244 4.252-1.189-1.256-.023-2.317-.854-2.684-1.995.451.086.895.061 1.298-.049-1.381-.278-2.335-1.522-2.304-2.853.388.215.83.344 1.301.359-1.279-.855-1.641-2.544-.889-3.835 1.416 1.738 3.533 2.881 5.92 3.001-.419-1.796.944-3.527 2.799-3.527.825 0 1.572.349 2.096.907.654-.128 1.27-.368 1.824-.697-.215.671-.67 1.233-1.263 1.589.581-.07 1.135-.224 1.649-.453-.384.578-.87 1.084-1.433 1.489z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Author Bio -->
+                    <div class="bg-artf-blanc p-6 rounded-2xl shadow-md mb-12"
+                        data-aos="fade-up">
+                        <div class="flex items-center">
+                            <div class="mr-4">
+                                <div
+                                    class="w-16 h-16 bg-artf-vert rounded-full flex items-center justify-center text-white font-bold">CR</div>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-artf-bleu">Charles
+                                    Ndong</h4>
+                                <p class="text-gray-600">Responsable
+                                    Communication à l'ARTF</p>
+                                <p
+                                    class="text-sm text-gray-600 mt-2">Journaliste
+                                    spécialisé dans les questions de transport
+                                    et d'infrastructures avec plus de 10 ans
+                                    d'expérience.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Related Articles -->
+                    <div data-aos="fade-up">
+                        <h3
+                            class="text-2xl font-bold text-artf-bleu mb-6">Articles
+                            similaires</h3>
+
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <article
+                                class="related-article bg-white rounded-2xl overflow-hidden shadow-md transition-all duration-300">
+                                <div class="h-40 overflow-hidden">
+                                    <img
+                                        src="https://scontent.flbv5-1.fna.fbcdn.net/v/t39.30808-6/487343533_1062536162575807_8618505342887167672_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_ohc=V3J3dEVpIfYQ7kNvwHQKYUh&_nc_oc=AdkekMxB6T_hRhTlZlkj3q-49mN-w36llSgd4y8FPeTDyVMFqrIR3Y51FuU7Th3GKitWu2csvw23T1DZqKkBJ-Ck&_nc_zt=23&_nc_ht=scontent.flbv5-1.fna&_nc_gid=xYyLB6L1-x3RDuEFVF9Pqg&oh=00_AfYfqZkfzbTsmJimPdqFX7suXdFB5J2iLOQ3xaZKXfeaYQ&oe=68CC9AC6"
+                                        alt="Sécurité ferroviaire"
+                                        class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-4">
+                                    <span
+                                        class="inline-block px-2 py-1 bg-artf-bleu text-white rounded text-xs mb-2">Sécurité</span>
+                                    <h4
+                                        class="font-bold text-artf-bleu mb-2">Nouveau
+                                        protocole de sécurité pour les passages
+                                        à niveau</h4>
+                                    <p class="text-sm text-gray-600">Mise en
+                                        place d'un système innovant de détection
+                                        et d'alerte...</p>
+                                    <a href="#"
+                                        class="text-artf-vert text-sm font-medium mt-2 inline-block">Lire
+                                        la suite</a>
+                                </div>
+                            </article>
+
+                            <article
+                                class="related-article bg-white rounded-2xl overflow-hidden shadow-md transition-all duration-300">
+                                <div class="h-40 overflow-hidden">
+                                    <img
+                                        src="https://scontent.flbv5-1.fna.fbcdn.net/v/t39.30808-6/487451835_1062537162575707_2393913625690878017_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_ohc=w-zq6hK79fYQ7kNvwFcAVMz&_nc_oc=AdlFBnl4y_cpy8ZPFusRMthc3RwGCEfz4GYztjcRbA-WMor6PTp64l9fzrMy8jkvz4RA2b0kRBb0ijCWCJAhNCA5&_nc_zt=23&_nc_ht=scontent.flbv5-1.fna&_nc_gid=t64GWrud189_hta1mYEH6w&oh=00_AfY6hGymQX_Muy9PRh8Lua_PeP3HiQdbXRF-Ncvk2vanAw&oe=68CC6DF2"
+                                        alt="Formation agents"
+                                        class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-4">
+                                    <span
+                                        class="inline-block px-2 py-1 bg-artf-jaune text-artf-bleu rounded text-xs mb-2">Formation</span>
+                                    <h4
+                                        class="font-bold text-artf-bleu mb-2">Programme
+                                        de formation avancée pour 50 contrôleurs
+                                        ferroviaires</h4>
+                                    <p class="text-sm text-gray-600">Lancement
+                                        d'un programme intensif de certification
+                                        pour renforcer...</p>
+                                    <a href="#"
+                                        class="text-artf-vert text-sm font-medium mt-2 inline-block">Lire
+                                        la suite</a>
+                                </div>
+                            </article>
+
+                            <article
+                                class="related-article bg-white rounded-2xl overflow-hidden shadow-md transition-all duration-300">
+                                <div class="h-40 overflow-hidden">
+                                    <img
+                                        src="https://scontent.flbv5-1.fna.fbcdn.net/v/t39.30808-6/488062251_1062522352577188_6580048073835346614_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_ohc=Fn50AXUcZNQQ7kNvwHzhE6S&_nc_oc=AdnVYRDjQGjXGACfQpnBKdiak_C8TYmy5hGqUKf22YZdJXNZFbT2FMmZ97zAd549RWHtrOz1RrLH0pJmo5H_9xSm&_nc_zt=23&_nc_ht=scontent.flbv5-1.fna&_nc_gid=su0V-wjgnBSMCa59qnXAUg&oh=00_AfYtzRvJGXHFEkDWy2YdzY9E30ML5TqJwjcRsT9zcIzYLg&oe=68CC9995"
+                                        alt="Partenariat international"
+                                        class="w-full h-full object-cover">
+                                </div>
+                                <div class="p-4">
+                                    <span
+                                        class="inline-block px-2 py-1 bg-artf-vert-dark text-white rounded text-xs mb-2">Coopération</span>
+                                    <h4
+                                        class="font-bold text-artf-bleu mb-2">Signature
+                                        d'un accord de coopération avec la SNCF
+                                        International</h4>
+                                    <p class="text-sm text-gray-600">Partenariat
+                                        stratégique pour l'échange d'expertise
+                                        et le transfert...</p>
+                                    <a href="#"
+                                        class="text-artf-vert text-sm font-medium mt-2 inline-block">Lire
+                                        la suite</a>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-artf-bleu text-white pt-16 pb-8">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-4 gap-10 mb-12">
+                    <div>
+                        <img src="logo-artf.png" alt="ARTF Logo"
+                            class="h-16 mb-4">
+                        <p class="opacity-90">
+                            L'Autorité de Régulation des Transports Ferroviaires
+                            veille au bon fonctionnement et au développement du
+                            secteur ferroviaire gabonais.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h4 class="text-lg font-bold mb-4 relative pb-2">
+                            <span class="relative">
+                                Accès rapide
+                                <span
+                                    class="absolute bottom-0 left-0 w-12 h-1 bg-artf-jaune"></span>
+                            </span>
+                        </h4>
+                        <ul class="space-y-2">
+                            <li><a href="index.html#accueil"
+                                    class="opacity-90 hover:opacity-100 hover:text-artf-jaune transition-colors">Accueil</a></li>
+                            <li><a href="index.html#apropos"
+                                    class="opacity-90 hover:opacity-100 hover:text-artf-jaune transition-colors">ARTF</a></li>
+                            <li><a href="index.html#missions"
+                                    class="opacity-90 hover:opacity-100 hover:text-artf-jaune transition-colors">Missions</a></li>
+                            <li><a href="services.html"
+                                    class="opacity-90 hover:opacity-100 hover:text-artf-jaune transition-colors">Services</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="text-lg font-bold mb-4 relative pb-2">
+                            <span class="relative">
+                                Services
+                                <span
+                                    class="absolute bottom-0 left-0 w-12 h-1 bg-artf-jaune"></span>
+                            </span>
+                        </h4>
+                        <ul class="space-y-2">
+                            <li><a href="services.html#autorisation"
+                                    class="opacity-90 hover:opacity-100 hover:text-artf-jaune transition-colors">Demande
+                                    d'autorisation</a></li>
+                            <li><a href="services.html#incident"
+                                    class="opacity-90 hover:opacity-100 hover:text-artf-jaune transition-colors">Signaler
+                                    un incident</a></li>
+                            <li><a href="services.html#objet-perdu"
+                                    class="opacity-90 hover:opacity-100 hover:text-artf-jaune transition-colors">Objets
+                                    perdus</a></li>
+                            <li><a href="#documents"
+                                    class="opacity-90 hover:opacity-100 hover:text-artf-jaune transition-colors">Documents
+                                    utiles</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="text-lg font-bold mb-4 relative pb-2">
+                            <span class="relative">
+                                Contact
+                                <span
+                                    class="absolute bottom-0 left-0 w-12 h-1 bg-artf-jaune"></span>
+                            </span>
+                        </h4>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="h-5 w-5 mr-2 mt-0.5 text-artf-jaune"
+                                    fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2"
+                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2"
+                                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                                <span class="opacity-90">BP 2110, Libreville,
+                                    Gabon</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="h-5 w-5 mr-2 mt-0.5 text-artf-jaune"
+                                    fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2"
+                                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                </svg>
+                                <span class="opacity-90">(+241) 01 77 25
+                                    89</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="h-5 w-5 mr-2 mt-0.5 text-artf-jaune"
+                                    fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2"
+                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                                <span class="opacity-90">contact@artf.ga</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div
+                    class="border-t border-artf-bleu-light pt-8 flex flex-col md:flex-row justify-between items-center">
+                    <p class="opacity-90 mb-4 md:mb-0">
+                        &copy; 2025 Autorité de Régulation des Transports
+                        Ferroviaires. Tous droits réservés.
+                    </p>
+
+                    <div class="flex space-x-6">
+                        <a href="#"
+                            class="opacity-90 hover:opacity-100 hover:text-artf-jaune transition-colors">Mentions
+                            légales</a>
+                        <a href="#"
+                            class="opacity-90 hover:opacity-100 hover:text-artf-jaune transition-colors">Politique
+                            de confidentialité</a>
+                        <a href="#"
+                            class="opacity-90 hover:opacity-100 hover:text-artf-jaune transition-colors">Accessibilité</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/navbar.js"></script>
+
+        <script>
+        // Initialize animations
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 800,
+                once: true
+            });
+        });
+    </script>
+    </body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Connexion - Portail ARTF</title>
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800&family=Noto+Sans:wght@400;500;600;700&display=swap"
+            rel="stylesheet">
+
+        <!-- Notyf (Notifications) -->
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+
+        <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Work Sans', 'Noto Sans', sans-serif;
+            background: linear-gradient(135deg, #2531a1 0%, #1f8851 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .login-container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 450px;
+            overflow: hidden;
+        }
+        
+        .login-header {
+            background: #2531a1;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .login-logo {
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+        }
+        
+        .login-logo-text {
+            font-size: 24px;
+            font-weight: 700;
+            color: #2531a1;
+        }
+        
+        .login-title {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .login-subtitle {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+        
+        .login-form {
+            padding: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #333;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: #2531a1;
+            box-shadow: 0 0 0 3px rgba(37, 49, 161, 0.1);
+        }
+        
+        .login-btn {
+            width: 100%;
+            padding: 14px;
+            background: #2531a1;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .login-btn:hover {
+            background: #1c287d;
+        }
+        
+        .login-footer {
+            text-align: center;
+            padding: 20px;
+            border-top: 1px solid #eee;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .login-footer a {
+            color: #2531a1;
+            text-decoration: none;
+        }
+        
+        .login-footer a:hover {
+            text-decoration: underline;
+        }
+        
+        .demo-credentials {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        
+        .demo-credentials p {
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        
+        .credential {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 3px;
+        }
+        
+        .credential span:first-child {
+            font-weight: 500;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="login-container">
+            <div class="login-header">
+                <div class="login-logo">
+                    <div class="login-logo-text">ARTF</div>
+                </div>
+                <h1 class="login-title">Portail Citoyen</h1>
+                <p class="login-subtitle">Accédez à vos services en ligne</p>
+            </div>
+
+            <form class="login-form" id="loginForm">
+                <div class="form-group">
+                    <label class="form-label">Nom d'utilisateur</label>
+                    <input type="text" class="form-input" id="username"
+                        placeholder="Votre nom d'utilisateur" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Mot de passe</label>
+                    <input type="password" class="form-input" id="password"
+                        placeholder="Votre mot de passe" required>
+                </div>
+
+                <button type="submit" class="login-btn">Se connecter</button>
+
+                <!-- <div class="demo-credentials">
+                    <p>Identifiants de démonstration :</p>
+                    <div class="credential">
+                        <span>Nom d'utilisateur:</span>
+                        <span>admin</span>
+                    </div>
+                    <div class="credential">
+                        <span>Mot de passe:</span>
+                        <span>admin</span>
+                    </div>
+                </div> -->
+            </form>
+
+            <div class="login-footer">
+                <p>Vous n'avez pas de compte ? <a href="#">Contactez
+                        l'administration</a></p>
+                <p><a href="#">Mot de passe oublié ?</a></p>
+            </div>
+        </div>
+
+        <!-- Notyf (Notifications) -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+
+        <script>
+        // Initialize Notyf for notifications
+        const notyf = new Notyf({
+            duration: 4000,
+            position: {
+                x: 'right',
+                y: 'top',
+            },
+            types: [
+                {
+                    type: 'success',
+                    background: '#42b74f',
+                    icon: {
+                        className: 'fas fa-check-circle',
+                        tagName: 'i',
+                        text: ''
+                    }
+                },
+                {
+                    type: 'error',
+                    background: '#e74c3c',
+                    icon: {
+                        className: 'fas fa-times-circle',
+                        tagName: 'i',
+                        text: ''
+                    }
+                }
+            ]
+        });
+        
+        // Handle form submission
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            
+            // Simple validation
+            if (username === 'admin' && password === 'admin') {
+                notyf.success('Connexion réussie! Redirection en cours...');
+                
+                // Redirect to portal after a short delay
+                setTimeout(() => {
+                    window.location.href = 'portail.html';
+                }, 1500);
+            } else {
+                notyf.error('Identifiants incorrects. Utilisez admin/admin pour la démo.');
+            }
+        });
+    </script>
+    </body>
+</html>
